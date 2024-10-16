@@ -1,0 +1,29 @@
+.title{
+    color: var(--colot-text);
+    margin: 1rem 2rem;
+
+    &.small{
+        font-size: 1rem;
+    }
+
+    &.medium{
+        font-size: 1.5rem;
+    }
+
+    &.large{
+        font-size: 1.8rem;
+    }
+    
+    &.light{
+        font-weight: 100;
+    }
+
+    &.regular{
+        font-weight: 400;
+    }
+
+    &.bold{
+        font-weight: 500;
+    }
+    
+}

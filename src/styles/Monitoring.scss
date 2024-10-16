@@ -1,0 +1,9 @@
+.wrapperCardMonitoring{
+    overflow-y: scroll;
+    height: -webkit-fill-available;
+    padding-right: 1rem;
+    margin: 0rem 1rem;
+    display:  flex;
+    flex-direction: column;
+    gap: 2rem;
+}

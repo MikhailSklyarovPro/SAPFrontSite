@@ -1,0 +1,15 @@
+.wrapperNameCompany{
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.beginWord{
+    color: var(--color-text);
+}
+
+.endWord{
+    color: var(--color-light-blue);
+}
