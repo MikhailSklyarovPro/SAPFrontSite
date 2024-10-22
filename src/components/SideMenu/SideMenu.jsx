@@ -1,19 +1,13 @@
+import '../SideMenu/SideMenu.scss'
 import React from 'react'
 import globalConstants from '../../config/globalConstants'
 import { NavLink } from 'react-router-dom'
-import '../SideMenu/SideMenu.scss'
 import { useUser } from '../../hooks/useUser'
-import Logo from '../Logo/Logo.jsx'
 import NameApp from '../NameApp/NameApp.jsx'
-import MonitoringIcon from './Img/MonitoringIcon.jsx'
-import AccountIcon from './Img/AccountIcon.jsx'
-import HistoryIcon from './Img/HistoryIcon.jsx'
-import NotificationsIcon from './Img/NotificationsIcon.jsx'
-import ExitIcon from './Img/ExitIcon.jsx'
 import ButtonMenu from '../UI/Button/ButtonMenu/ButtonMenu.jsx'
 import { useActions } from '../../hooks'
 import ThemeSwitch from '../ThemeSwitch/ThemeSwitch.jsx'
-import TestingIcon from './Img/TestingIcon.jsx'
+import {LogoIcon, AccountIcon, HistoryIcon, MonitoringIcon, NotificationsIcon, TestingIcon, ExitIcon} from '../../img/Icons.jsx'
 
 
 export const SideMenu = () => {
@@ -25,7 +19,7 @@ export const SideMenu = () => {
         isAuth ?
             <div className="wrapperSideMenu">
                 <div className="wrapperLogoAndName">
-                    <Logo />
+                    <LogoIcon />
                     <NameApp />
                 </div>
                 <ul className="sideMenu">

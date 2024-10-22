@@ -1,28 +1,32 @@
-import React, {useState} from 'react'
-import { EyeImg } from './Img/EyeImg.jsx'
-import '../TextField.scss'
+import React, { useState } from 'react';
+import { EyeHiddenIcon, EyeVisibilityIcon } from '../../../../img/Icons.jsx';
+import '../TextField.scss';
 
-export const TextfieldPassword = ({placeholder, ...props}) => {
+export const TextfieldPassword = ({ placeholder, ...props }) => {
     const [password, setPassword] = useState("");
-    const [type, setType] = useState('password');
-    const onToggle = (isVisiblePassword) => {
-        if (isVisiblePassword){
-            setType('text')
-         } else {
-            setType('password')
-         }
+    const [isVisiblePassword, ToggleVisiblePassword] = useState(false)
+
+    const changePassword = (event) => {
+        setPassword(event.target.value)
     }
 
-    return(
+    const onToggle = () => {
+        ToggleVisiblePassword(!isVisiblePassword)
+    }
+
+    return (
         <div className="wrapperTextfield">
-            <input 
-                placeholder={placeholder} 
-                type={type} 
-                className="textfield" 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)}
+            <input
+                placeholder={placeholder}
+                type="text"
+                className="textfield"
+                value={password}
+                onChange={(event) => changePassword(event)}
             />
-            <EyeImg onToggle={onToggle}/>
+
+            <div className='eyeIcon' onClick={onToggle}>
+                {isVisiblePassword ? <EyeHiddenIcon /> : <EyeVisibilityIcon />}
+            </div>
         </div>
     )
 }

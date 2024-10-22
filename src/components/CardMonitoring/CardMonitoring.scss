@@ -2,66 +2,104 @@
     display: flex;
     flex-direction: column;
     border-radius: 14px;
-    border: 1px solid var(--color-light-border);
+    border: 2px solid var(--color-light-border);
     margin: 0rem 1rem;
+}
 
-    .headerCardMonitoring{
-        padding: 1rem;
+.headerCardMonitoring{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .textDescriptionCardMonitoring{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .textDescriptionCardMonitoring{
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            font-weight: 400;
-        }
-        .iconButtonCardMonitoring{
-
-        }
+        flex-direction: column;
+        gap: 0.5rem;
+        font-weight: 400;
+        font-size: 1.1rem;
     }
-    .footerCardMonitoring{
-        padding: 1rem;
-        border-top: 1px solid var(--color-light-border);
-        background: var(--color-opacity-blue);
-        border-bottom-right-radius: 12px;
-        border-bottom-left-radius: 12px;
+}
+
+.footerCardMonitoring{
+    padding: 0.5rem 2rem;
+    border-top: 1px solid var(--color-light-border);
+    background: var(--color-opacity-blue);
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .wrapperAllIconsCardMonitoring{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 100%;
-
-        .wrapperAllIconsCardMonitoring{
+        width: 65%;
+        .wrapperIconCardMonitoring{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            width: 65%;
-            .wrapperIconCardMonitoring{
-                display: flex;
-                flex-direction: row;
-                gap: 1rem;
-                font-size: 1rem;
-                font-weight: 400;
-                align-items: center;
+            gap: 0.4rem;
+            font-weight: 400;
+            align-items: center;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border-radius: 12px;
+            padding: 0.5rem 1rem;
+            &:hover{
+                background: #c6e0ff;
+            }
+
+            svg{
+                width: 18px;
+                height: 18px;
+                path{
+                    stroke: #3A65FF;
+                }
+            }
+        }
+    }
+
+    .wrapperStatusCardMonitoring{
+        width: 35%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        .statusCardMonitoring{
+            padding: 0.4rem 1rem;
+            border: 2px solid;
+            border-radius: 10px;
+            font-size: 0.9rem;
+
+            &.finish{
+                border-color: var(--color-green);
+                p{
+                    color: var(--color-green);
+                }
+            }
+              
+            
+            &.inQueue{
+                border-color: var(--color-red);   
+                p{
+                    color: var(--color-red);  
+                }
+            }
+
+            &.running{
+                border-color: var(--color-orange);       
+                p{
+                    color: var(--color-orange);   
+                }
             }
         }
 
-        .wrapperStatusCardMonitoring{
-            width: 35%;
-            display: flex;
-            flex-direction: row;
-            justify-content: end;
-            .statusCardMonitoring{
-                padding: 0.4rem 1rem;
-                border: 1px solid black;
-                border-radius: 10px;
-            }
-        }
     }
 }
 
 .wrapperDescriptionMonitoring{
     margin-top: 0.5rem;
 }
+
 

@@ -26,7 +26,7 @@ const monitoringData = {
             stage: "3/4",
             percentExecute: "54%",
             timeRun: "45c.",
-            status: "Выполнен",
+            status: "В очереди",
             testData: "Тестовые данные"
         },
         {
@@ -40,7 +40,7 @@ const monitoringData = {
             stage: "3/4",
             percentExecute: "54%",
             timeRun: "45c.",
-            status: "Выполнен",
+            status: "Выполняется",
             testData: "Тестовые данные"
         },
         {

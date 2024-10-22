@@ -1,18 +1,35 @@
-.textfield{
-    border-radius: 16px;
-    border: 1px solid var(--color-border-textfield);
-    outline: none;
-    background-color: var(--backround-textfield);
-    font-size: 0.9rem;
-    padding: 0.6rem;
-    color: var(--color-text);
-    width: 100%;
+.textfield {
+	border-radius: 14px;
+	border: 1px solid var(--color-border-textfield);
+	outline: none;
+	background-color: var(--backround-textfield);
+	font-size: 0.9rem;
+	padding: 0.6rem 3rem 0.6rem 0.6rem;
+	color: var(--color-text);
+	width: 100%;
 }
 
+.wrapperTextfield {
+	width: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
 
-.wrapperTextfield{
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
+	.eyeIcon {
+		position: absolute;
+		right: 0;
+		margin-right: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			width: 24px;
+			height: 24px;
+
+			path {
+				fill: var(--color-dark-grey);
+			}
+		}
+	}
 }

@@ -21,11 +21,13 @@ export const Filter = ({isInput, isMulti, options, placeholder, ...props}) => {
                 control: (baseStyles, state) => ({
                     ...baseStyles,
                     borderRadius: '12px',
-                    width: '20vw'
+                    //width: '16vw',
+                    //minWidth: '100px'
                 }),
                 placeholder: (baseStyles, state) => ({
                     ...baseStyles,
-                    color: 'var(--color-scrollbar-track)'
+                    color: 'var(--color-light-grey)',
+                    fontWeight: '300'
                 }),
             }}
         />

@@ -1,10 +1,9 @@
 import React from "react";
-import "../styles/Monitoring.scss";
-import { monitoringData } from "../data/user.data.js";
 import CardMonitoring from "../components/CardMonitoring/CardMonitoring.jsx";
-import Title from "../components/UI/Title/Title.jsx";
-import globalConstants from "../config/globalConstants.js";
 import Filter from "../components/Filter/Filter.jsx";
+import Title from "../components/UI/Title/Title.jsx";
+import { monitoringData } from "../data/user.data.js";
+import "../styles/Monitoring.scss";
 
 export const Monitoring = () => {
     const listItems = monitoringData.allTest.map((item) => (
@@ -40,12 +39,12 @@ export const Monitoring = () => {
 
     return (
         <>
-            <Title text="Мониторинг" size={globalConstants.size.large} fontWeight={globalConstants.fontWeight.bold}/>
+            <Title text="Мониторинг" className={"titlePage"} />
             <div className="wrapperFilter">
-                <Filter isInput={true} isMulti={true} options={optionsSystem} placeholder="Система"/>
-                <Filter isInput={true} isMulti={true} options={optionsTest} placeholder="Тест"/>
-                <Filter isInput={false} isMulti={true} options={optionsStatus} placeholder="Статус"/>
-                <Filter isInput={true} isMulti={true} options={optionsAuthor} placeholder="Автор"/>
+                <Filter isInput={true} isMulti={true} options={optionsSystem} placeholder="Система" />
+                <Filter isInput={true} isMulti={true} options={optionsTest} placeholder="Тест" />
+                <Filter isInput={false} isMulti={true} options={optionsStatus} placeholder="Статус" />
+                <Filter isInput={true} isMulti={true} options={optionsAuthor} placeholder="Автор" />
             </div>
             <div className="wrapperCardMonitoring">
                 {listItems}

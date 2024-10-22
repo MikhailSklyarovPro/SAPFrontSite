@@ -1,10 +1,11 @@
 import React from 'react'
 import './CardMonitoring.scss'
-import CalendarIcon from './Img/CalendarIcon.jsx'
-import TimerIcon from './Img/TimerIcon.jsx'
-import AuthorIcon from './Img/AuthorIcon.jsx'
-import StageIcon from './Img/StageIcon.jsx'
-import ClockIcon from './Img/ClockIcon.jsx'
+import {ClockIcon, StageIcon, TimerIcon, AuthorIcon, CalendarIcon} from '../../img/Icons.jsx'
+// import CalendarIcon from '../../img/CalendarIcon.jsx'
+// import TimerIcon from '../../img/TimerIcon.jsx'
+// import AuthorIcon from '../../img/AuthorIcon.jsx'
+// import StageIcon from '../../img/StageIcon.jsx'
+// import ClockIcon from '../../img/ClockIcon.jsx'
 
 
 export const CardMonitoring = ({data, ...props}) => {
@@ -16,7 +17,10 @@ export const CardMonitoring = ({data, ...props}) => {
                 <p className='wrapperDescriptionMonitoring smallGreyText'>Описание: {data.description}</p>
             </div>
             <div className="iconButtonCardMonitoring">
-                Кнопки управления
+               {
+
+               }
+
             </div>
         </div>
         <div className="footerCardMonitoring">
@@ -42,12 +46,12 @@ export const CardMonitoring = ({data, ...props}) => {
                 </div>
                 <div className="wrapperIconCardMonitoring">
                     <TimerIcon/>
-                    <p>{data.timeRun}</p>
+                    <p className='finish'>{data.timeRun}</p>
                 </div>
             </div>
 
             <div className="wrapperStatusCardMonitoring">
-                <div className="statusCardMonitoring">
+                <div className={data.status === "Выполнен" ? "statusCardMonitoring finish": data.status === "В очереди" ? "statusCardMonitoring inQueue" : data.status === "Выполняется"? "statusCardMonitoring running": ""}>
                     <p>{data.status}</p>
                 </div>
             </div>
