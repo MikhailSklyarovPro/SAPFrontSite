@@ -1,13 +1,13 @@
 import React from 'react'
 import { useActions } from '../hooks'
-import { Button } from '../components/UI/Button/ButtonCalssic/Button.jsx'
 import '../styles/Account.scss'
+import { ButtonClassic } from '../components/UI/ButtonClassic/ButtonClassic.jsx'
 
 const Account = () => {
 	const {Logout} = useActions()
 	return (
 		<div>
-			<Button onClick={() => Logout()} text="Выйти"/>
+			<ButtonClassic onClick={() => Logout()} text="Выйти"/>
 		</div>
 	)
 }

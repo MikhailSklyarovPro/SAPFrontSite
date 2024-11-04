@@ -92,11 +92,6 @@ export const globalConstants = {
 			white: '#ebebeb',
 			dark: '#4E4D4D',
 		},
-		colorOcpacityBlue: {
-			key: '--color-opacity-blue',
-			white: '#ECF2FF',
-			dark: '#3F3F3F',
-		},
 		colorGrey: {
 			key: '--color-grey',
 			white: '#5c5c5c',

@@ -1,13 +1,14 @@
 import React from 'react'
-import { useAuthMutation } from '../API/testWebApi'
-import NameApp from '../components/NameApp/NameApp.jsx'
-import { Button } from '../components/UI/Button/ButtonCalssic/Button.jsx'
-import { TextfieldClassic } from '../components/UI/TextFields/Classic/TextfieldClassic.jsx'
-import { TextfieldPassword } from '../components/UI/TextFields/Password/TextfieldPassword.jsx'
 import globalConstants from '../config/globalConstants.js'
+import { useAuthMutation } from '../API/testWebApi'
+import { ButtonClassic } from '../components/UI/ButtonClassic/ButtonClassic.jsx'
 import { useTheme } from '../hooks/index'
 import { LogoIcon } from '../img/Icons.jsx'
+import { NameApp } from '../components/NameApp/NameApp.jsx'
+import { TextFieldText } from '../components/UI/TextFieldText/TextFieldText.jsx'
+
 import '../styles/Login.scss'
+import { TextFieldPassword } from '../components/UI/TextFieldPassword/TextFieldPassword.jsx'
 
 const Login = () => {
 	const { SetTheme, isDarkMode } = useTheme()
@@ -21,11 +22,11 @@ const Login = () => {
 					<LogoIcon />
 					<NameApp />
 				</div>
-				<TextfieldClassic placeholder="Логин" isPassword={false} />
-				<TextfieldPassword placeholder="Пароль" isPassword={true} />
-				<My onClick={onClickAuth} text="Вход" />
-				<Button text="Забыли пароль?" />
-				<Button onClick={() => SetTheme(isDarkMode ? globalConstants.localStorage.theme.white : globalConstants.localStorage.theme.dark)} text="Сменить тему" />
+				<TextFieldText placeholder="Логин"/>
+				<TextFieldPassword placeholder="Пароль"/>
+				<ButtonClassic onClick={onClickAuth} text="Вход" />
+				<ButtonClassic text="Забыли пароль?" />
+				<ButtonClassic onClick={() => SetTheme(isDarkMode ? globalConstants.localStorage.theme.white : globalConstants.localStorage.theme.dark)} text="Сменить тему" />
 			</div>
 		</div>
 	)

@@ -100,3 +100,40 @@ body,
 	font-size: 1.8rem;
 	font-weight: 500;
 }
+
+
+
+
+
+.strokeIcon{
+	fill:none;
+	stroke:none;
+	stroke-width: 1.5;
+	mask:url(#groupMask);
+}
+
+
+.MuiInputBase-root{
+    input{
+        padding: 0.8rem 1rem;
+    }
+    fieldset{
+        border-radius: 16px;
+    }
+    div{
+        margin-left: 0;
+        button{
+            padding: 0rem 0.4rem 0rem 0.2rem;
+        }
+    }
+}
+
+.MuiFormLabel-root{
+    label{
+        line-height: normal;
+    }
+}
+
+.MuiFormControl-root {
+    width: 100%;
+}
