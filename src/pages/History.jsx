@@ -1,9 +1,9 @@
 import React from 'react'
-import '../styles/History.scss' 
+import '../styles/History.scss'
 
 export const History = () => {
   return (
-    <div>History</div>
+    <div>История тестирования</div>
   )
 }
 

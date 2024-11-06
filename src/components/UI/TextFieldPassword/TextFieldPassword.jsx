@@ -1,51 +1,70 @@
-import React from 'react'
-import IconButton from '@mui/material/IconButton';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
+import { useState } from 'react';
 import { Visibility, VisibilityOff } from '../../../img/Icons';
-// import Visibility from '@mui/icons-material/Visibility';
-// import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import './TextFieldPassword.scss';
 
-export const TextFieldPassword = ({ placeholder, ...props }) => {
-    const [showPassword, setShowPassword] = React.useState(false);
+export const TextFieldPassword = ({ placeholder, id, maxLength, ...props }) => {
+    const [showPassword, setShowPassword] = useState(false);
+    const [activeField, setActiveField] = useState(false);
+    const [valuePassword, SetValuePassword] = useState("");
+    const [hiddenPassword, SetHiddenPassword] = useState("");
 
-    const handleClickShowPassword = (event) => {
-        event.preventDefault();
-        setShowPassword((show) => !show)
+    let passwordBuffer = ""
+    const handleMouseDownPassword = (event) => { event.preventDefault(); };
+
+    const handleMouseUpPassword = (event) => { event.preventDefault(); };
+
+    const enterPassword = (event) => {
+        if (showPassword) {
+            passwordBuffer = event.target.value
+            if (event.nativeEvent.inputType === "deleteContentBackward" && valuePassword.length > 0) {
+                SetValuePassword(valuePassword.slice(0, valuePassword.length - 1))
+            } else {
+                SetValuePassword(valuePassword + passwordBuffer[passwordBuffer.length - 1])
+            }
+            SetHiddenPassword(passwordBuffer)
+        }
+        else {
+            let hiddenPasswordBuffer = "";
+            passwordBuffer = event.target.value
+            for (let i = 0; i < passwordBuffer.length; i++) {
+                hiddenPasswordBuffer = hiddenPasswordBuffer + "*"
+            }
+
+            SetHiddenPassword(hiddenPasswordBuffer)
+            if (event.nativeEvent.inputType === "deleteContentBackward" && valuePassword.length > 0) {
+                SetValuePassword(valuePassword.slice(0, valuePassword.length - 1))
+            } else {
+                SetValuePassword(valuePassword + passwordBuffer[passwordBuffer.length - 1])
+            }
+        }
     };
-  
-    const handleMouseDownPassword = (event) => {
-      event.preventDefault();
-    };
-  
-    const handleMouseUpPassword = (event) => {
-      event.preventDefault();
-    };
+
+    const clickEyeIcon = (event) => {
+        event.preventDefault()
+        if (!showPassword) {
+            SetHiddenPassword(valuePassword)
+        }
+        else {
+            let hiddenPasswordBuffer = "";
+            for (let i = 0; i < valuePassword.length; i++) {
+                hiddenPasswordBuffer = hiddenPasswordBuffer + "*"
+            }
+            SetHiddenPassword(hiddenPasswordBuffer)
+        }
+        setShowPassword(!showPassword);
+    }
 
     return (
-        <>
-            <FormControl variant="outlined">
-                <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                <OutlinedInput
-                    id="outlined-adornment-password"
-                    type={showPassword ? 'text' : 'password'}
-                    endAdornment={
-                        <InputAdornment>
-                            <IconButton
-                                onClick={handleClickShowPassword}
-                                onMouseDown={handleMouseDownPassword}
-                                onMouseUp={handleMouseUpPassword}
-                                edge="end"
-                            >
-                                {showPassword ? <VisibilityOff /> : <Visibility />}
-                            </IconButton>
-                        </InputAdornment>
-                    }
-                    label="Password"
-                />
-            </FormControl>
-        </>
+        <div className='wrapperTextField' onFocus={() => setActiveField(true)} onBlur={() => setActiveField(false)}>
+            <label htmlFor={id} className={activeField ? 'activeTexfield' : valuePassword !== '' ? 'notActiveTextfieldAndNotNull' : 'notActiveTextfield'}>{placeholder}</label>
+            <input maxLength={maxLength} id={id} type='text' value={hiddenPassword} onChange={(event) => enterPassword(event)} autoComplete="off" />
+            <button
+                onClick={(event) => clickEyeIcon(event)}
+                onMouseDown={handleMouseDownPassword}
+                onMouseUp={handleMouseUpPassword}
+            >
+                {showPassword ? <VisibilityOff style={activeField ? { fill: "var(--color-light-blue)" } : { fill: "var(--color-grey)" }} /> : <Visibility style={activeField ? { fill: "var(--color-light-blue)" } : { fill: "var(--color-grey)" }} />}
+            </button>
+        </div>
     )
 }

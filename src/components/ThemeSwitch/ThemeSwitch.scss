@@ -1,26 +1,56 @@
-.background{
-    border-radius: 12px;
-    width: 3rem;
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
-    background: var(--color-primary);
-    box-shadow: 0px 0px 5px 0px  var(--color-shadow);
-    cursor: pointer;
-    gap: 0.2rem;
+.background {
+	border-radius: 12px;
+	width: 2.8rem;
+	height: 1.4rem;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	gap: 0.2rem;
+	position: relative;
+	transition: 200ms ease;
 
-}
+	&:hover {
+		filter: brightness(90%);
+	}
 
-.switchWhite{
-    fill-opacity: 100%;
-    transition: fill-opacity 5s;
-    //justify-content: flex-start;
-    //padding-left: 0.4rem;
-}
+	svg {
+		position: absolute;
+		width: 18px;
+		height: 18px;
+	}
 
-.switchDark{
-    fill-opacity: 100%;
-    transition: fill-opacity 5s;
-    //justify-content: flex-end;
-    //padding-right: 0.4rem;
+	&.switchDark {
+		//background: var(--background-app);
+		background: var(--color-light-blue);
+		.moonIcon {
+			left: 0;
+			margin-left: 0.3rem;
+			transition: 600ms ease;
+			fill-opacity: 100%;
+		}
+		.sunIcon {
+			right: 0;
+			margin-right: 0.3rem;
+			transition: 600ms ease;
+			fill-opacity: 0%;
+			transform: translateX(-1rem);
+		}
+	}
+
+	&.switchWhite {
+		background: var(--color-light-blue);
+		.moonIcon {
+			left: 0;
+			margin-left: 0.3rem;
+			transition: 600ms ease;
+			fill-opacity: 0%;
+			transform: translateX(1rem);
+		}
+		.sunIcon {
+			right: 0;
+			margin-right: 0.3rem;
+			transition: 600ms ease;
+			fill-opacity: 100%;
+		}
+	}
 }

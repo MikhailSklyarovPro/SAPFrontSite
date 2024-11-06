@@ -1,0 +1,62 @@
+.wrapperTextField {
+	position: relative;
+	width: 100%;
+	cursor: pointer;
+
+	label {
+		z-index: 2;
+		cursor: pointer;
+		position: absolute;
+		left: 0;
+		transition-property: background-color, color, margin, padding, font-size;
+		transition-duration: 250ms;
+		transition-timing-function: ease;
+
+		font-size: 0.96rem;
+		&.activeTexfield {
+			margin-top: -0.5rem;
+			font-size: 0.8rem;
+			margin-left: 0.6rem;
+			padding: 0rem 0.4rem;
+			background-color: var(--color-primary);
+			color: var(--color-light-blue);
+		}
+
+		&.notActiveTextfield {
+			margin-left: 0.8rem;
+			font-size: 0.9rem;
+			margin-top: 0.7rem;
+			color: var(--color-grey);
+		}
+
+		&.notActiveTextfieldAndNotNull {
+			margin-top: -0.5rem;
+			font-size: 0.8rem;
+			margin-left: 0.6rem;
+			padding: 0rem 0.4rem;
+			background-color: var(--color-primary);
+			color: var(--color-grey);
+		}
+	}
+
+	input {
+		z-index: 1;
+		all: unset;
+		box-sizing: border-box;
+		font-size: 0.9rem;
+		padding: 0.6rem 0.6rem;
+		border-radius: 14px;
+		width: 100%;
+		border: 1px solid var(--color-light-grey);
+		transition: 300ms ease;
+
+		&:focus,
+		:active {
+			border: 1px solid var(--color-light-blue);
+		}
+	}
+
+	input:hover {
+		filter: brightness(85%);
+	}
+}

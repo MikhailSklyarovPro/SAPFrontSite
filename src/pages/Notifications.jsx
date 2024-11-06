@@ -3,7 +3,7 @@ import '../styles/Notifications.scss'
 
 export const Notifications = () => {
   return (
-    <div>Notifications</div>
+    <div>Уведомления</div>
   )
 }
 

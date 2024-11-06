@@ -1,21 +1,15 @@
-.button {
-	padding: 0.5rem;
+.buttonClassic {
+	padding: 0.6rem;
 	font-size: 0.9rem;
 	cursor: pointer;
 	width: 100%;
-
 	border: none;
+	border-radius: 12px;
+	background-color: var(--color-light-blue);
+	color: var(--color-white);
+	transition: 300ms ease;
 
-	&.classic {
-		border-radius: 12px;
-		background-color: var(--color-light-blue);
-		color: var(--color-white);
-	}
-
-	&.link {
-		color: var(--color-text-invert);
-		background: none;
-		text-decoration: underline;
-		color: var(--color-text);
+	&:hover {
+		filter: brightness(96%);
 	}
 }

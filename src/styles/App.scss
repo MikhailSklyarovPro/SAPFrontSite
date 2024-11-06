@@ -6,6 +6,7 @@
 	--color-green: #00a300;
 	--color-orange: #ffa500;
 	--color-light-grey: #c4c4c4;
+	--color-grey: #8a8a8a;
 	--color-dark-grey: #5d5d5d;
 
 	--color-primary: white;
@@ -20,6 +21,7 @@
 	--background-app: #f0f5fa;
 	--background-textfield: #fbfbfb;
 	--background-thumb: #c9c9c9;
+	--background-logo: #272727;
 }
 
 * {
@@ -101,39 +103,14 @@ body,
 	font-weight: 500;
 }
 
-
-
-
-
-.strokeIcon{
-	fill:none;
-	stroke:none;
+.strokeIcon {
+	fill: none;
+	stroke: none;
 	stroke-width: 1.5;
-	mask:url(#groupMask);
+	mask: url(#groupMask);
 }
 
-
-.MuiInputBase-root{
-    input{
-        padding: 0.8rem 1rem;
-    }
-    fieldset{
-        border-radius: 16px;
-    }
-    div{
-        margin-left: 0;
-        button{
-            padding: 0rem 0.4rem 0rem 0.2rem;
-        }
-    }
-}
-
-.MuiFormLabel-root{
-    label{
-        line-height: normal;
-    }
-}
-
-.MuiFormControl-root {
-    width: 100%;
+.contentRow {
+	display: flex;
+	flex-direction: row;
 }

@@ -1,19 +1,19 @@
-import '../SideMenu/SideMenu.scss'
 import React from 'react'
-import globalConstants from '../../config/globalConstants'
 import { NavLink } from 'react-router-dom'
-import { useUser } from '../../hooks/useUser'
-import NameApp from '../NameApp/NameApp.jsx'
-import ButtonMenu from '../UI/ButtonMenu/ButtonMenu.jsx'
+import globalConstants from '../../config/globalConstants'
 import { useActions } from '../../hooks'
+import { useUser } from '../../hooks/useUser'
+import { AccountIcon, ExitIcon, HistoryIcon, LogoIcon, MonitoringIcon, NotificationsIcon, TestingIcon } from '../../img/Icons.jsx'
+import NameApp from '../NameApp/NameApp.jsx'
+import '../SideMenu/SideMenu.scss'
 import ThemeSwitch from '../ThemeSwitch/ThemeSwitch.jsx'
-import {LogoIcon, AccountIcon, HistoryIcon, MonitoringIcon, NotificationsIcon, TestingIcon, ExitIcon} from '../../img/Icons.jsx'
+import ButtonMenu from '../UI/ButtonMenu/ButtonMenu.jsx'
 
 
 export const SideMenu = () => {
     const { isAuth } = useUser()
     const { Logout } = useActions()
-    let currentClass = ({isActive}) => {return isActive ? "activeItemMenu": "notActiveItemMenu"}
+    let currentClass = ({ isActive }) => { return isActive ? "activeItemMenu" : "notActiveItemMenu" }
 
     return (
         isAuth ?

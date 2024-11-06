@@ -35,12 +35,12 @@ export const globalConstants = {
 		primary: {
 			key: '--color-primary',
 			white: '#fff',
-			dark: '#373737',
+			dark: '#0f0f0f',
 		},
 		colorText: {
 			key: '--color-text',
 			white: '#0f0f0f',
-			dark: '#c9c9c9',
+			dark: '#e7e7e7',
 		},
 		colorBorderTextfield: {
 			key: '--color-border-textfield',
@@ -94,8 +94,13 @@ export const globalConstants = {
 		},
 		colorGrey: {
 			key: '--color-grey',
-			white: '#5c5c5c',
-			dark: '#3F3F3F',
+			white: '#8A8A8A',
+			dark: '#d4d4d4',
+		},
+		colorDarkGrey: {
+			key: '--color-dark-grey',
+			white: '#5d5d5d',
+			dark: '#bdbdbd',
 		},
 	},
 	background: {
@@ -107,12 +112,17 @@ export const globalConstants = {
 		backgroundApp: {
 			key: '--background-app',
 			white: '#F0F5FA',
-			dark: '#313131',
+			dark: '#202442',
 		},
 		backgroundThumb: {
 			key: '--background-thumb',
 			white: '#c9c9c9',
 			dark: '#787878',
+		},
+		backgroundLogo: {
+			key: '--background-logo',
+			white: '#272727',
+			dark: 'var(--background-app)',
 		},
 	},
 }

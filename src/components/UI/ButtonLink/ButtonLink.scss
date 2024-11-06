@@ -1,0 +1,14 @@
+.buttonLink {
+	width: 100%;
+	background: none;
+	border: none;
+	font-size: 0.9rem;
+	text-decoration: underline;
+	color: var(--color-light-blue);
+	cursor: pointer;
+	transition: 200ms ease;
+
+	&:hover {
+		filter: brightness(90%);
+	}
+}
