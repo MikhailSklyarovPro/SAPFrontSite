@@ -12,6 +12,8 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	transition: 300ms ease;
+
 	svg {
 		cursor: pointer;
 		&.circleLogo {
@@ -21,6 +23,10 @@
 		&.roketLogo {
 			fill: white;
 		}
+	}
+
+	&:hover {
+		filter: brightness(85%);
 	}
 }
 
@@ -34,23 +40,12 @@
 
 	.activeItemMenu {
 		.itemSideMenu {
-			background-color: var(--color-invert-primary);
+			background-color: var(--background-active-button-menu);
 			svg {
 				width: 30px;
 				height: 30px;
 				path {
-					stroke: var(--color-primary);
-				}
-			}
-		}
-
-		.itemSideMenu:hover {
-			background-color: var(--background-app);
-			svg {
-				width: 30px;
-				height: 30px;
-				path {
-					stroke: var(--color-invert-primary);
+					stroke: var(--color-white);
 				}
 			}
 		}
@@ -63,17 +58,7 @@
 				width: 30px;
 				height: 30px;
 				path {
-					stroke: var(--color-invert-primary);
-				}
-			}
-		}
-
-		.itemSideMenu:hover {
-			svg {
-				width: 30px;
-				height: 30px;
-				path {
-					stroke: var(--color-primary);
+					stroke: var(--color-icon-button-menu);
 				}
 			}
 		}

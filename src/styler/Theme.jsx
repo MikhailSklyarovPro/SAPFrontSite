@@ -24,11 +24,16 @@ const Theme = ({ children }) => {
 			root.style.setProperty(colors.colorGrey.key, colors.colorGrey.white)
 			root.style.setProperty(colors.colorThumb.key, colors.colorThumb.white)
 			root.style.setProperty(colors.colorDarkGrey.key, colors.colorDarkGrey.white)
+			root.style.setProperty(colors.colorLightGrey.key, colors.colorLightGrey.white)
+			root.style.setProperty(colors.colorIconButtonMenu.key, colors.colorIconButtonMenu.white)
 
 			root.style.setProperty(background.backgroundApp.key, background.backgroundApp.white)
 			root.style.setProperty(background.backgroundTextfield.key, background.backgroundTextfield.white)
 			root.style.setProperty(background.backgroundThumb.key, background.backgroundThumb.white)
 			root.style.setProperty(background.backgroundLogo.key, background.backgroundLogo.white)
+			root.style.setProperty(background.backgroundInvertLogo.key, background.backgroundInvertLogo.white)
+			root.style.setProperty(background.backgroundActiveButtonMenu.key, background.backgroundActiveButtonMenu.white)
+
 
 		} else {
 			root.style.setProperty(colors.primary.key, colors.primary.dark)
@@ -44,11 +49,15 @@ const Theme = ({ children }) => {
 			root.style.setProperty(colors.colorGrey.key, colors.colorGrey.dark)
 			root.style.setProperty(colors.colorThumb.key, colors.colorThumb.dark)
 			root.style.setProperty(colors.colorDarkGrey.key, colors.colorDarkGrey.dark)
+			root.style.setProperty(colors.colorLightGrey.key, colors.colorLightGrey.dark)
+			root.style.setProperty(colors.colorIconButtonMenu.key, colors.colorIconButtonMenu.dark)
 
 			root.style.setProperty(background.backgroundApp.key, background.backgroundApp.dark)
 			root.style.setProperty(background.backgroundTextfield.key, background.backgroundTextfield.dark)
 			root.style.setProperty(background.backgroundThumb.key, background.backgroundThumb.dark)
 			root.style.setProperty(background.backgroundLogo.key, background.backgroundLogo.dark)
+			root.style.setProperty(background.backgroundInvertLogo.key, background.backgroundInvertLogo.dark)
+			root.style.setProperty(background.backgroundActiveButtonMenu.key, background.backgroundActiveButtonMenu.dark)
 		}
 	}, [theme])
 

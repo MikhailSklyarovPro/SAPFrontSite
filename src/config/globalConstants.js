@@ -35,7 +35,7 @@ export const globalConstants = {
 		primary: {
 			key: '--color-primary',
 			white: '#fff',
-			dark: '#0f0f0f',
+			dark: '#2f3357',
 		},
 		colorText: {
 			key: '--color-text',
@@ -92,15 +92,25 @@ export const globalConstants = {
 			white: '#ebebeb',
 			dark: '#4E4D4D',
 		},
+		colorLightGrey: {
+			key: '--color-light-grey',
+			white: '#c4c4c4',
+			dark: '#757575',
+		},
 		colorGrey: {
 			key: '--color-grey',
 			white: '#8A8A8A',
-			dark: '#d4d4d4',
+			dark: '#c0c0c0',
 		},
 		colorDarkGrey: {
 			key: '--color-dark-grey',
 			white: '#5d5d5d',
 			dark: '#bdbdbd',
+		},
+		colorIconButtonMenu: {
+			key: '--color-icon-button-menu',
+			white: '#373737',
+			dark: '#54acff',
 		},
 	},
 	background: {
@@ -122,7 +132,17 @@ export const globalConstants = {
 		backgroundLogo: {
 			key: '--background-logo',
 			white: '#272727',
-			dark: 'var(--background-app)',
+			dark: '#202442',
+		},
+		backgroundInvertLogo: {
+			key: '--background-invert-logo',
+			white: '#272727',
+			dark: '#2f3357',
+		},
+		backgroundActiveButtonMenu: {
+			key: '--background-active-button-menu',
+			white: '#373737',
+			dark: 'var(--color-light-blue)',
 		},
 	},
 }

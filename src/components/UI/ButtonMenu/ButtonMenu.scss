@@ -12,91 +12,74 @@
 	border: none;
 	overflow: hidden;
 	background-color: var(--color-primary);
-	svg {
-		z-index: 1000;
-		defs {
-			.maskWhite {
-				animation-name: waveIconFill;
-				animation-duration: 2s;
-				animation-iteration-count: infinite;
-				animation-direction: alternate;
-				animation-timing-function: ease-in;
-				animation-play-state: paused;
-			}
-			.maskBlack {
-				animation-name: waveIconFill2;
-				animation-duration: 6s;
-				animation-iteration-count: infinite;
-				animation-direction: alternate;
-				animation-timing-function: ease-in;
-				animation-play-state: paused;
-			}
-		}
-	}
-}
-.itemSideMenu::before {
-	content: '';
-	position: absolute;
-	width: 220px;
-	height: 220px;
-	border-radius: 90px;
-	transform: translate(-100%);
-	animation-name: waveBegin;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in;
-	animation-direction: alternate;
-	animation-play-state: paused;
-	background-color: rgba($color: #000000, $alpha: 0);
-	//transition: 1s ease-out;
+
+	// svg {
+	// 	defs {
+	// 		.maskWhite {
+	// 			animation-name: waveIconFill;
+	// 			animation-duration: 2s;
+	// 			animation-iteration-count: infinite;
+	// 			animation-direction: alternate;
+	// 			animation-timing-function: ease-in;
+	// 			animation-play-state: paused;
+	// 		}
+	// 		.maskBlack {
+	// 			animation-name: waveIconFill2;
+	// 			animation-duration: 6s;
+	// 			animation-iteration-count: infinite;
+	// 			animation-direction: alternate;
+	// 			animation-timing-function: ease-in;
+	// 			animation-play-state: paused;
+	// 		}
+	// 	}
+	// }
 }
 
-.itemSideMenu:hover {
-	background-color: var(--color-ivert-primary);
-	svg {
-		z-index: 1000;
-		defs {
-			.maskWhite {
-				animation-play-state: running;
-			}
-			.maskBlack {
-				animation-play-state: running;
-			}
-		}
-	}
-}
+// .itemSideMenu::before {
+// 	content: '';
+// 	position: absolute;
+// 	width: 220px;
+// 	height: 220px;
+// 	border-radius: 90px;
+// 	transform: translate(-100%);
+// 	animation-name: waveBegin;
+// 	animation-duration: 2s;
+// 	animation-iteration-count: infinite;
+// 	animation-timing-function: ease-in;
+// 	animation-direction: alternate;
+// 	animation-play-state: paused;
+// 	background-color: rgba($color: #000000, $alpha: 0);
+// 	//transition: 1s ease-out;
+// }
 
-.itemSideMenu:hover::before {
-	background-color: rgba($color: #353535, $alpha: 0.8);
-	animation-play-state: running;
-	animation-timing-function: ease-in;
-}
+// .itemSideMenu:hover {
+//background-color: var(--color-ivert-primary);
+// 	svg {
+// 		z-index: 1000;
+// 		defs {
+// 			.maskWhite {
+// 				animation-play-state: running;
+// 			}
+// 			.maskBlack {
+// 				animation-play-state: running;
+// 			}
+// 		}
+// 	}
+// }
 
-@keyframes waveBegin {
-	0% {
-		top: 60%;
-		transform: rotate(-180deg);
-	}
-	100% {
-		top: 15%;
-		transform: rotate(30deg);
-	}
-}
+// .itemSideMenu:hover::before {
+// 	background-color: rgba($color: #353535, $alpha: 0.8);
+// 	animation-play-state: running;
+// 	animation-timing-function: ease-in;
+// }
 
-@keyframes waveIconFill {
-	0% {
-		y: 30;
-	}
-	100% {
-		y: 10;
-	}
-}
-
-@keyframes waveIconFill2 {
-	0% {
-		y: 0;
-	}
-	100% {
-		y: -30;
-	}
-}
+// @keyframes waveBegin {
+// 	0% {
+// 		top: 60%;
+// 		transform: rotate(-180deg);
+// 	}
+// 	100% {
+// 		top: 15%;
+// 		transform: rotate(30deg);
+// 	}
+// }

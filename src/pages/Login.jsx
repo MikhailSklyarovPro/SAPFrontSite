@@ -17,7 +17,7 @@ const Login = () => {
 		<div className="pageLogin">
 			<div className="formLogin">
 				<div className="loginWrapperLogo">
-					<LogoIcon width={60} height={60} />
+					<LogoIcon width={60} height={60} background="var(--background-logo)" />
 					<NameApp />
 				</div>
 				<div className="loginButtonsWrapper">
