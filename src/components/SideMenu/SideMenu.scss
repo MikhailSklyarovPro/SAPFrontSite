@@ -26,7 +26,7 @@
 	}
 
 	&:hover {
-		filter: brightness(85%);
+		filter: brightness(120%);
 	}
 }
 
@@ -48,18 +48,26 @@
 					stroke: var(--color-white);
 				}
 			}
+
+			&:hover {
+				filter: brightness(110%);
+			}
 		}
 	}
 
 	.notActiveItemMenu {
 		.itemSideMenu {
-			background-color: var(--color-primary);
 			svg {
 				width: 30px;
 				height: 30px;
 				path {
 					stroke: var(--color-icon-button-menu);
 				}
+			}
+
+			&:hover {
+				background-color: var(--color-primary);
+				filter: invert(0.06) hue-rotate(-16deg);
 			}
 		}
 	}
