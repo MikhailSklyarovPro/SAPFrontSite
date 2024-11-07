@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {useToastSuccess, useToastError} from '../hooks/index'
+import { useToastError, useToastSuccess } from '../hooks/useToasts'
 const userSlice = createSlice({
 	name: 'user',
 	initialState: {
@@ -9,29 +9,29 @@ const userSlice = createSlice({
 		token: '',
 	},
 	reducers: {
-		AuthPending (state, action){
+		AuthPending(state, action) {
 			state.isAuthLoading = true
 			useToastSuccess({ message: action.payload })
 		},
-		
-		AuthFulfilled (state, action){
+
+		AuthFulfilled(state, action) {
 			state.isAuthLoading = false
 			state.isAuth = true
 			state.user = { Name: 'Misha' }
 			useToastSuccess({ message: action.payload })
 		},
-		
-		AuthRejected (state, action) {
+
+		AuthRejected(state, action) {
 			state.isAuthLoading = false
 			state.isAuth = true
 			useToastError({ message: action.payload })
 		},
-		
-		Logout (state) {
+
+		Logout(state) {
 			state.isAuthLoading = false
 			state.isAuth = false
-			useToastSuccess({ message: "Logout"})
-		}
+			useToastSuccess({ message: 'Logout' })
+		},
 	},
 })
 
