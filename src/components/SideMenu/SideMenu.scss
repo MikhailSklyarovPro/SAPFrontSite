@@ -3,6 +3,7 @@
 	flex-direction: column;
 	padding: 1rem 1rem 1rem 1rem;
 	font-weight: 400;
+	height: 100vh;
 	justify-content: space-between;
 }
 
@@ -42,8 +43,8 @@
 		.itemSideMenu {
 			background-color: var(--background-active-button-menu);
 			svg {
-				width: 30px;
-				height: 30px;
+				width: 2rem;
+				height: 2rem;
 				path {
 					stroke: var(--color-white);
 				}
@@ -58,8 +59,8 @@
 	.notActiveItemMenu {
 		.itemSideMenu {
 			svg {
-				width: 30px;
-				height: 30px;
+				width: 2rem;
+				height: 2rem;
 				path {
 					stroke: var(--color-icon-button-menu);
 				}

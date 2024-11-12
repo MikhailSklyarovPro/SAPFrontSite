@@ -1,9 +1,9 @@
 import React from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { SideMenu } from '../components/SideMenu/SideMenu.jsx'
 import globalConstants from '../config/globalConstants'
 import { useUser } from '../hooks/useUser.js'
 import { loadRoute, privateRoutes, publicRoutes } from './Routes.jsx'
-import { SideMenu } from '../components/SideMenu/SideMenu.jsx'
 const AppRouter = () => {
 	const { isAuth, isAuthLoading } = useUser()
 	const { state, pathname } = useLocation()
@@ -13,7 +13,7 @@ const AppRouter = () => {
 	return !isAuthLoading ? (
 		isAuth ? (
 			<div className="wrapperPage">
-				<SideMenu/>
+				<SideMenu />
 				<div className="content">
 					<Routes>
 						{privateRoutes.map(route => (
@@ -21,7 +21,7 @@ const AppRouter = () => {
 						))}
 						<Route
 							path={globalConstants.routes.login}
-							element={<Navigate to={state?.prevUrl || globalConstants.routes.testing} replace />}
+							element={<Navigate to={state?.prevUrl || globalConstants.routes.choiceSystem} replace />}
 						/>
 						{publicRoutes.map(route => (
 							<Route element={route.element} path={route.path} exact={route.exact} key={route.path} />

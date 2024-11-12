@@ -18,14 +18,14 @@ export const SideMenu = () => {
     return (
         isAuth ?
             <div className="wrapperSideMenu">
-                <NavLink to={globalConstants.routes.testing} className={currentClass}>
+                <NavLink to={globalConstants.routes.choiceSystem} className={currentClass}>
                     <div className="wrapperLogoAndName">
                         <LogoIcon background="var(--background-invert-logo)" />
                         <NameApp />
                     </div>
                 </NavLink>
                 <ul className="sideMenu">
-                    <NavLink to={globalConstants.routes.testing} className={currentClass}>
+                    <NavLink to={globalConstants.routes.choiceSystem} className={currentClass}>
                         <ButtonMenu>
                             <TestingIcon />
                         </ButtonMenu>

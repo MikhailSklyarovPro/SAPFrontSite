@@ -1,11 +1,10 @@
 import React from 'react'
 import globalConstants from '../config/globalConstants'
 import Account from '../pages/Account.jsx'
-import Login from '../pages/Login.jsx'
 import Error404 from '../pages/Error404.jsx'
-import Loading from '../pages/Loading.jsx'
-import Testing from '../pages/Testing.jsx'
 import History from '../pages/History.jsx'
+import Loading from '../pages/Loading.jsx'
+import Login from '../pages/Login.jsx'
 import Monitoring from '../pages/Monitoring.jsx'
 import Notifications from '../pages/Notifications.jsx'
 
@@ -23,8 +22,8 @@ export const publicRoutes = [
 	{ path: globalConstants.routes.error404, element: <Error404 />, exact: true },
 ]
 
-export const loadRoute = { 
-	path: globalConstants.routes.any, 
-	element: <Loading />, 
-	exact: true 
+export const loadRoute = {
+	path: globalConstants.routes.any,
+	element: <Loading />,
+	exact: true
 }

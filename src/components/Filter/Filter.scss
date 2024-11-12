@@ -1,3 +1,11 @@
-.reactSelect__control{
-    border-radius: 12px 
+.MuiFormControl-root {
+	.MuiInputBase-root {
+		border-radius: 14px;
+	}
+}
+
+.MuiPopover-root {
+	.MuiPaper-root {
+		border-radius: 14px;
+	}
 }
