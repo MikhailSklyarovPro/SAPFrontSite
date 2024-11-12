@@ -90,7 +90,7 @@ export const globalConstants = {
 		colorThumb: {
 			key: '--color-thumb',
 			white: '#ebebeb',
-			dark: '#4E4D4D',
+			dark: '#484c75',
 		},
 		colorLightGrey: {
 			key: '--color-light-grey',
@@ -127,7 +127,7 @@ export const globalConstants = {
 		backgroundThumb: {
 			key: '--background-thumb',
 			white: '#c9c9c9',
-			dark: '#787878',
+			dark: '#65688c',
 		},
 		backgroundLogo: {
 			key: '--background-logo',
